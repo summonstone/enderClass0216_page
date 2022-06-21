@@ -18,55 +18,59 @@ public class BoardVO implements Serializable {
 	private int page;
 	private int limit;
 
-	
 	public final int getBo_re_ref() {
 		return bo_re_ref;
 	}
+
 	public final void setBo_re_ref(int bo_re_ref) {
 		this.bo_re_ref = bo_re_ref;
 	}
+
 	public final int getBo_re_lev() {
 		return bo_re_lev;
 	}
+
 	public final void setBo_re_lev(int bo_re_lev) {
 		this.bo_re_lev = bo_re_lev;
 	}
+
 	public final int getBo_re_seq() {
 		return bo_re_seq;
 	}
+
 	public final void setBo_re_seq(int bo_re_seq) {
 		this.bo_re_seq = bo_re_seq;
 	}
+
 	public BoardVO() {
 		// TODO Auto-generated constructor stub
 	}
+
 	public BoardVO(int page, int limit) {
 		super();
-		this.page = page;
+//		this.page = page;
+		this.page = (page-1) * 10;
 		this.limit = limit;
-		
+
 	}
 
 	public final int getPage() {
-		
+
 		return page;
 	}
 
-
 	public final void setPage(int page) {
 		this.page = page;
+//		this.page = ((page - 1) / 10) * 10 + 1;
 	}
-
 
 	public final int getLimit() {
 		return limit;
 	}
 
-
 	public final void setLimit(int limit) {
 		this.limit = limit;
 	}
-
 
 	public BoardVO(String part, String searchData) {
 		super();

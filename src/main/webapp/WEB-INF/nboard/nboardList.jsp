@@ -60,9 +60,7 @@ int endPage = pvo.getEndPage();
 	<c:import url="/WEB-INF/header.jsp" />
 	<div align="center">
 		<table class='table table-striped'>
-		<%
-		if(list !=null && listCount >0){
-		%>
+		
 		
 			<tr>
 				<th>번호</th>
@@ -103,6 +101,9 @@ int endPage = pvo.getEndPage();
 				</td>
 			</tr>
 			<section id="pageList">
+			<%
+		if(list !=null && listCount >0){
+		%>
 		<%if(nowPage<=1){ %>
 		[이전]&nbsp;
 		<%}else{ %>
